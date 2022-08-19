@@ -22,10 +22,11 @@ $(document).ready(function(){
 		// ----- OPEN COMIC FROM COMPUTER -----
     $("#fileup").change(function(){
 			if($(this)[0].files.length == 0) {
-				$('#output').html("<font color='red'>Please choose a comic file</font><br>");
+				$('#output').html("<font color='red'>Choisir un fichier</font><br>");
 			} else {
 				var file = $(this)[0].files[0];
 				// open the comic
+				openFullscreen()
 				openComic(file);
 			}
     });
@@ -69,7 +70,7 @@ $(document).ready(function(){
 				});
 
 				// Update progress text
-				$('.progress-text').html("Reading 0/0 pages");
+				$('.progress-text').html("Chargement de 0/0 pages");
 
 				// show loading
 				$('.se-pre-con').fadeIn('slow');
@@ -89,7 +90,7 @@ $(document).ready(function(){
 				archiveOpenFile(file, function(archive, err) {
 					if (archive)
 					{
-						$('#output').append("<b>"+archive.file_name+"</b><br><i>Click on the image to enlarge</i><br><br>");
+						$('#output').append("<b>"+archive.file_name+"</b><br><i>Cliquer sur l'image pour l'agrandir</i><br><br>");
 						readContents(archive);
 					}
 					else
@@ -181,11 +182,11 @@ $(document).ready(function(){
             $('#output').append("<a href='"+url+"' id='comicImg'><img src='"+url+"' class='imgUrl'/></a>");
 
 			// Update progress text
-			$('.progress-text').html("Reading "+i+"/"+max+" pages");
+			$('.progress-text').html("Chargement de "+i+"/"+max+" pages");
 
 			// only hide loading spinnder when done process all
 			if(i == (max-1)) {
-				$('.progress-text').html("<font color='lime'>Completed!</font>");
+				$('.progress-text').html("<font color='lime'>Fait!</font>");
 
 				// hide loading
                 $('.se-pre-con').fadeOut('slow');
