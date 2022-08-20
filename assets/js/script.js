@@ -59,6 +59,7 @@ $(document).ready(function(){
 				$(document).one('click','#comicImg',function(){
 					event.preventDefault();
 					// initialize gallery
+					
 					$('#output').lightGallery({
 						selector: 'a',
 						zoom: true,
@@ -77,6 +78,7 @@ $(document).ready(function(){
 
 				// destroy lightGallery
 				var $lg = $('#output');
+		
 				$lg.lightGallery();
 				$lg.data('lightGallery').destroy(true);
 
@@ -193,6 +195,11 @@ $(document).ready(function(){
 
                 // show output box
                 $('#output').fadeIn('slow');
+				var element = document.getElementById("output")
+				element.addEventListener('lgBeforeSlide', (event) => {
+					const { index, prevIndex } = event.detail;
+					console.log(index + prevIndex);
+				});
 			}
         });
     }

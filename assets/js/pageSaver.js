@@ -1,3 +1,3 @@
-window.addEventListener('popstate', function (event) {
-	console.log(event.state);
+$lg.on('onAfterSlide.lg', function (event, prevIndex, index) {
+	alert(index)
 });
