@@ -18,6 +18,19 @@ body {
   color: white;
 }
 
+div.fadeMe {
+    opacity:0.7;
+    filter: alpha(opacity=20);
+    background-color:#000; 
+    width:100%; 
+    height:100%; 
+    z-index:100000000000000000000000000000000;
+    pointer-events:none;   
+    top:0; 
+    left:0; 
+    position:fixed; 
+  }
+
 .se-pre-con {
     position: fixed;
     left: 0px;
