@@ -97,7 +97,7 @@ $(document).ready(function(){
 					}
 					else
 					{
-						$('#output').append("<font color='red'>"+err+"</font><br>");
+						
 
 						// hide loading
 						$('.se-pre-con').fadeOut('slow');
@@ -188,7 +188,7 @@ $(document).ready(function(){
 
 			// only hide loading spinnder when done process all
 			if(i == (max-1)) {
-				$('.progress-text').html("<font color='lime'>Fait!</font>");
+				$('.progress-text').html("<font color='#0A84FF'>Fait!</font>");
 
 				// hide loading
                 $('.se-pre-con').fadeOut('slow');
