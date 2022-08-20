@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <meta charset="utf-8" />
   <!-- Compiled and minified JavaScript -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="./assets/css/lightgallery.min.css" rel="stylesheet">
   <script>
@@ -29,11 +30,23 @@
   
   <center>
     <div class="container">
-      <h2 style="text-align: left; font-weight: bold; margin-bottom: 30px;">Comics</h2>
+      <h2 style="text-align: left; font-weight: bold; margin-bottom: 30px; ">Comics <a class='dropdown-trigger btn-flat' href='#' data-target='dropdown1' style="margin-left: 20px; color: 0A84FF; border-radius: 60px; margin-bottom: 5px; text-transform: none;"><i class="material-icons left">brightness_5</i> Luminosité</a></h2>
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="shortcuts://run-shortcut?name=Brightness10">10%</a></li>
+        <li><a href="shortcuts://run-shortcut?name=Brightness20">20%</a></li>
+        <li><a href="shortcuts://run-shortcut?name=Brightness30">30%</a></li>
+        <li><a href="shortcuts://run-shortcut?name=Brightness40">40%</a></li>
+        <li><a href="shortcuts://run-shortcut?name=Brightness50">50%</a></li>
+        <li><a href="shortcuts://run-shortcut?name=Brightness60">60%</a></li>
+        <li><a href="shortcuts://run-shortcut?name=Brightness70">70%</a></li>
+        <li><a href="shortcuts://run-shortcut?name=Brightness80">80%</a></li>
+        <li><a href="shortcuts://run-shortcut?name=Brightness90">90%</a></li>
+        <li><a href="shortcuts://run-shortcut?name=Brightness100">100%</a></li>
+      </ul>
       <div class="file-field input-field">
         <div class="btn" style="border-radius: 60px !important; background-color: #0A84FF;">
           <span style="text-transform: none !important;">Ouvrir un comic</span>
-          <input type="file" name="fileup" id="fileup" accept="application/vnd.comicbook-rar">
+          <input type="file" name="fileup" id="fileup">
         </div>
         
         <div class="file-path-wrapper">

@@ -39,6 +39,10 @@ body {
 	text-align: center;
 }
 
+li a {
+    color: #0A84FF !important;
+}
+
 fieldset {
     display: inline-block;
     background: #fff;
@@ -65,6 +69,14 @@ fieldset {
 	transform: scale(1.1);
 }
 
+.imgUrl {
+    border-radius: 20px;
+}
+
+ul {
+    border-radius: 14px;
+}
+
 /* for mobile */
 @media only screen
 and (min-device-width : 320px)
@@ -80,6 +92,24 @@ and (max-device-width : 480px) {
     body {
         background-color: #000000;
         color: #ffffff
+    }
+
+    ul {
+        border-color: #ffffff;
+        border: 10px;
+    }
+
+    li {
+        background-color: #1D1D1F;
+    }
+    li:hover {
+        background-color: #4b4b50 !important;
+        opacity: 15 !important;
+        
+    }
+
+    li a {
+        color: #ffffff !important;
     }
 
     .se-pre-con {
