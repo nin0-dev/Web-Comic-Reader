@@ -28,19 +28,38 @@
         document.getElementById("brightnessText").innerHTML = "Baisser la luminosité"
       }
     }
+
+    function night()
+    {
+      
+      if(document.getElementById("nightShift").style.display != "inline")
+      {
+        document.getElementById("nightShift").style.display = "inline"
+        return 1;
+      }
+      if(document.getElementById("nightShift").style.display == "inline")
+      {
+        document.getElementById("nightShift").style.display = "none"
+      }
+    }
   </script>
   <title>Comics</title>
 </head>
 
 <body id="body">
   <div class="fadeMe" id="lowBrightness"></div>
+  <div class="nightShift" id="nightShift"></div>
+  
   <div class="se-pre-con">
     <div class="progress-text">Chargement de 0/0 pages</div>
   </div> <!-- loading spinner -->
   
   <center>
     <div class="container">
-      <h2 style="text-align: left; font-weight: bold; margin-bottom: 30px; margin-top: 55px;" onclick="brightness()"><span onclick="hejfug()">Comics</span></span> <a class="btn-flat" style="margin-left: 20px; color: 0A84FF; border-radius: 60px; margin-bottom: 5px; text-transform: none;"><i class="material-icons left">brightness_5</i> <div style="display: inline; margin-left: 0px;" id="brightnessText">Baisser la luminosité</div></a></h2>
+      <h2 style="text-align: left; font-weight: bold; margin-bottom: 30px; margin-top: 55px;"><span onclick="hejfug()">Comics</span></span>
+         <a  href="javascript:brightness()" class="btn-flat" style="margin-left: 20px; color: 0A84FF; border-radius: 60px; margin-bottom: 5px; text-transform: none;"><i class="material-icons left">brightness_5</i> <div style="display: inline; margin-left: 0px;" id="brightnessText">Baisser la luminosité</div></a>
+         <a href="javascript:night()"  class="btn-flat" style="margin-left: 20px; color: 0A84FF; border-radius: 60px; margin-bottom: 5px; text-transform: none; margin-left: -20px"><i class="material-icons left">dark_mode</i> <div style="display: inline; margin-left: 0px;" id="brightnessText">Éclairage nocturne</div></a>
+      </h2>
       <div class="file-field input-field">
         <div class="btn" style="border-radius: 60px !important; background-color: #0A84FF;">
           <span style="text-transform: none !important;">Ouvrir un comic</span>
