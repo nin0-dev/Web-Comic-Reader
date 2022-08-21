@@ -5,7 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
 		// specify options here
 	});
 });
+function setCookie(cname, cvalue, exdays) {
+	const d = new Date();
+	d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	let expires = "expires="+ d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
+function getCookie(cname) {
+	let name = cname + "=";
+	let decodedCookie = decodeURIComponent(document.cookie);
+	let ca = decodedCookie.split(';');
+	for(let i = 0; i <ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
 $(document).ready(function(){
 	
 	// tab switch
@@ -207,6 +228,14 @@ $(document).ready(function(){
 					const { index, prevIndex } = event.detail;
 					console.log(index + prevIndex);
 				});
+				if(getCookie("currentBook") == document.getElementById("file-path").value && getCookie("currentPage") != 0)
+				{
+					var page = parseInt(getCookie("currentPage")) + 1
+					document.getElementById("dialogText").innerHTML = "Reprendre à la page " + page + "?"
+					document.getElementById("dialogBtn").click()
+					//document.getElementsByClassName("imgUrl")[0].click()
+				}
+				//document.getElementsByClassName("imgUrl")[0].click()
 			}
 		});
 	}

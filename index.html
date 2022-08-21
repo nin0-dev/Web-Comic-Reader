@@ -54,7 +54,20 @@
   <div class="se-pre-con">
     <div class="progress-text">Chargement de 0/0 pages</div>
   </div> <!-- loading spinner -->
-  
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" id="dialogBtn" href="#modal1" style="display: none;">Modal</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal" style="margin-top: auto !important; margin-bottom: auto !important; border-radius: 20px; height: 156px; width: 300px;">
+      <div class="modal-content">
+        <h4>Reprendre la lecture</h4>
+        <p id="dialogText">Reprendre à la page XX?</p>
+      </div>
+      <div class="modal-footer" style="margin-top: -30px;">
+        <a href="javascript:restorePage()" class="modal-close waves-effect waves-black btn-flat"  style="color: #0A84FF; margin-left: auto !important; font-weight: bolder; text-transform: none;">Oui</a>
+        <a href="#!" class="modal-close waves-effect waves-black btn-flat" style="color: #ca1010; margin-left: auto !important; font-weight: 600; text-transform: none; margin-right: 10px;">Non</a>
+      </div>
+    </div>
   <center>
     <div class="container">
       <h2 style="text-align: left; font-weight: bold; margin-bottom: 30px; margin-top: 55px;"><span onclick="hejfug()">Comics</span></span>
@@ -68,7 +81,7 @@
         </div>
         
         <div class="file-path-wrapper">
-          <input class="file-path" type="text">
+          <input class="file-path" id="file-path" type="text">
           
         </div>
       </div>
