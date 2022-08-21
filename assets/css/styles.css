@@ -33,7 +33,7 @@ div.fadeMe {
   }
 
   div.nightShift {
-    opacity:0.15;
+    opacity:0.17;
     filter: alpha(opacity=20);
     display: none;
     background-color:rgb(204, 152, 39); 
