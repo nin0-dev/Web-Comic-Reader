@@ -1,3 +1,4 @@
-$lg.on('onAfterSlide.lg', function (event, prevIndex, index) {
-	alert(index)
-});
+setInterval(function(){
+	const urlParams = new URLSearchParams(window.location.search);
+	console.log(urlParams.get('slide'))
+}, 1);
