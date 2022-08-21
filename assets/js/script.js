@@ -30,11 +30,10 @@ $(document).ready(function(){
 	// ----- OPEN COMIC FROM COMPUTER -----
 	$("#fileup").change(function(){
 		if($(this)[0].files.length == 0) {
-			$('#output').html("<font color='red'>Choisir un fichier</font><br>");
+			
 		} else {
 			var file = $(this)[0].files[0];
 			// open the comic
-			openFullscreen()
 			openComic(file);
 		}
 	});
